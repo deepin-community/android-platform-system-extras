@@ -1,0 +1,66 @@
+Source: android-platform-system-extras
+Section: devel
+Priority: optional
+Maintainer: Android Tools Maintainers <android-tools-devel@lists.alioth.debian.org>
+Uploaders: Hans-Christoph Steiner <hans@eds.org>,
+           Kai-Chung Yan <seamlikok@gmail.com>,
+           Chirayu Desai <chirayudesai1@gmail.com>
+Build-Depends: debhelper-compat (= 12),
+               android-libsparse-dev (>= 1:10.0.0+r36-1~),
+               android-libselinux-dev (>= 10.0.0+r36-1~),
+               android-libcutils-dev (>= 1:10.0.0+r36-1~),
+               android-libbase-dev (>= 1:10.0.0+r36-1~),
+               android-platform-system-core-headers (>= 1:10.0.0+r36-1~),
+               dh-exec,
+               libsquashfuse-dev,
+Standards-Version: 4.2.1
+Rules-Requires-Root: no
+Homepage: https://android.googlesource.com/platform/system/extras
+Vcs-Git: https://salsa.debian.org/android-tools-team/android-platform-system-extras.git
+Vcs-Browser: https://salsa.debian.org/android-tools-team/android-platform-system-extras
+
+Package: android-libext4-utils
+Section: libs
+Architecture: i386 amd64 armel armhf arm64 mips mipsel mips64el
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Android ext4 utility library
+ Android ext4 filesystem utility library, which is only used by fastboot
+ currently.
+
+Package: android-libext4-utils-dev
+Section: libdevel
+Architecture: all
+Depends:
+ android-libext4-utils (>= ${binary:Version}),
+ android-libext4-utils (<< ${binary:Version}.1~),
+ ${misc:Depends}
+Description: Android ext4 utility library - Development files
+ Android ext4 filesystem utility library header files, which is only
+ used by fastboot currently.
+ .
+ This package contains the development files.
+
+Package: android-libfec
+Section: libs
+Architecture: i386 amd64 armel armhf arm64 mips mipsel mips64el
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Android libfec library
+ Android libfec library, which read files or partitions with
+ error-correcting codes appended to them. Uses verity metadata to speed
+ up I/O and improve error correction effectiveness.
+ .
+ This is only used by fastboot currently.
+
+Package: android-libfec-dev
+Section: libdevel
+Architecture: all
+Depends:
+ android-libfec (>= ${binary:Version}),
+ android-libfec (<< ${binary:Version}.1~),
+ ${misc:Depends}
+Description: Android libfec library - Development files
+ Android libfec library, which read files or partitions with
+ error-correcting codes appended to them. Uses verity metadata to speed
+ up I/O and improve error correction effectiveness.
+ .
+ This package contains the development files.

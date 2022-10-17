@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/architecture.mk
+include /usr/share/dpkg/pkg-info.mk
+
+# Security Hardening
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND = -fPIC
+export DEB_CPPFLAGS_MAINT_APPEND = -I/usr/include/android -DNDEBUG
+export OUT_DIR = debian/out
+
+lib%.so: debian/lib%.mk
+	dh_auto_build --buildsystem=makefile -- -f $<
+
+%:
+	dh $@
+
+
+override_dh_shlibdeps:
+	dh_shlibdeps -l/usr/lib/$(DEB_HOST_MULTIARCH)/android
+
+override_dh_auto_build: libext4_utils.so libfec.so

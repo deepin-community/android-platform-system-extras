@@ -1,0 +1,10 @@
+# ignore test data that is not used in the package
+source: source-is-missing simpleperf/doc/report_html.html line length is 31720 characters (>512)
+source: source-is-missing simpleperf/doc/trace_offcpu.html line length is 18352 characters (>512)
+source: source-is-missing simpleperf/doc/without_trace_offcpu.html line length is 31720 characters (>512)
+source: source-contains-prebuilt-javascript-object simpleperf/doc/report_html.html line length is 31720 characters (>512)
+source: source-contains-prebuilt-javascript-object simpleperf/doc/trace_offcpu.html line length is 18352 characters (>512)
+source: source-contains-prebuilt-javascript-object simpleperf/doc/without_trace_offcpu.html line length is 31720 characters (>512)
+source: very-long-line-length-in-source-file simpleperf/doc/report_html.html line length is 31720 characters (>512)
+source: very-long-line-length-in-source-file simpleperf/doc/trace_offcpu.html line length is 18352 characters (>512)
+source: very-long-line-length-in-source-file simpleperf/doc/without_trace_offcpu.html line length is 31720 characters (>512)
