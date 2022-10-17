@@ -1,0 +1,132 @@
+android-platform-system-extras (10.0.0+r36+ds-2) unstable; urgency=medium
+
+  * Team upload.
+  * Source only upload to allow testing migration.
+
+ -- Roger Shimizu <rosh@debian.org>  Wed, 23 Dec 2020 18:48:01 +0900
+
+android-platform-system-extras (10.0.0+r36+ds-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Hans-Christoph Steiner ]
+  * gitlab-ci: publish builds to aptly repo
+  * gitlab-ci: fix aptly job
+
+  [ Roger Shimizu ]
+  * Re-import upstream as 10.0.0+r36+ds, to remove binaries.
+  * Add building libfec
+  * libext4-utils: Move all .so to library package
+  * debian/control:
+    - Add more package description.
+  * debian/copyright:
+    - Add removed binaries to Files-Excluded list.
+    - Remove entries that no longer exist.
+  * debian/rules:
+    - Add security hardening.
+  * debian/source/lintian-overrides:
+    - Remove entries that no longer exist.
+  * debian/watch:
+    - Add repack version mangling.
+
+ -- Roger Shimizu <rosh@debian.org>  Tue, 22 Dec 2020 03:12:44 +0900
+
+android-platform-system-extras (10.0.0+r36-1) unstable; urgency=medium
+
+  * New upstream version
+  * removed packages removed by upstream: android-libf2fs-utils-dev,
+    android-libf2fs-utils, and android-sdk-ext4-utils
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Wed, 25 Nov 2020 14:42:21 +0100
+
+android-platform-system-extras (8.1.0+r23-3) unstable; urgency=medium
+
+  [ Roger Shimizu ]
+  * d/watch: Update rule to get new upstream version
+
+  [ Hans-Christoph Steiner ]
+  * Pass -fcommon to unbreak build with GCC 10 (Closes: #956999)
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Thu, 08 Oct 2020 19:03:22 +0200
+
+android-platform-system-extras (8.1.0+r23-2) unstable; urgency=medium
+
+  * Release to unstable
+
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Sun, 21 Oct 2018 17:22:46 +0800
+
+android-platform-system-extras (8.1.0+r23-1) experimental; urgency=medium
+
+  [ Hans-Christoph Steiner ]
+  * New upstream release
+  * d/copyright: Use HTTPS URLs
+  * Switch to Salsa
+
+  [ Saif Abdul Cassim ]
+  * New package android-sdk-ext4-utils providing:
+    * mkuserimg
+    * ext4fixup
+    * make_ext4fs
+    * This package is replacing the obsolete android-tools-fsutils
+
+  [ Kai-Chung Yan ]
+  * Debhelper level => 11
+  * d/rules: Use dh-auto-build instead of plain make thanks to Helmut Grohne
+  * Fix the conflicting types errors (Closes: #892170)
+  * Standards-Version => 4.2.1
+
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Sun, 30 Sep 2018 21:08:46 +0800
+
+android-platform-system-extras (7.0.0+r33-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Wed, 26 Apr 2017 16:40:14 +0200
+
+android-platform-system-extras (7.0.0+r1-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Tue, 06 Dec 2016 22:18:46 +0800
+
+android-platform-system-extras (7.0.0+r1-1) experimental; urgency=medium
+
+  * New upstream release
+  * Enable builds for ARM & MIPS
+  * Update to debhelper 10
+
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Fri, 23 Sep 2016 18:47:36 +0800
+
+android-platform-system-extras (6.0.1+r55-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian: Add watch file for usage with uscan
+  * debian/watch: recompress using xz
+  * Update Android Build-Depends to the latest version available
+
+ -- Chirayu Desai <chirayudesai1@gmail.com>  Sun, 21 Aug 2016 18:40:51 +0530
+
+android-platform-system-extras (6.0.1+r16-2) unstable; urgency=medium
+
+  * d/control:
+    - Standards-Version => 3.9.8
+    - Maintainer: Unify to "Android Tools Maintainers"
+    - Add dh-exec to Build-Depends
+  * Add multiarch android directory to RPATH (Closes: #826642)
+  * Install the libraries to multiarch path
+  * d/rules: Move some global compiler flags to here
+  * Override binary-or-shlib-defines-rpath
+
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Tue, 07 Jun 2016 19:02:04 +0800
+
+android-platform-system-extras (6.0.1+r16-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Tue, 16 Feb 2016 17:38:19 +0800
+
+android-platform-system-extras (6.0.0+r26-1) unstable; urgency=low
+
+  * Initial release (Closes: #810596)
+
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Fri, 5 Feb 2016 21:02:44 +0800
