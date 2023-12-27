@@ -6,7 +6,7 @@ include /usr/share/dpkg/pkg-info.mk
 # Security Hardening
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 export DEB_LDFLAGS_MAINT_APPEND = -fPIC
-export DEB_CPPFLAGS_MAINT_APPEND = -I/usr/include/android -DNDEBUG
+export DEB_CPPFLAGS_MAINT_APPEND = -I/usr/include/android -DNDEBUG `pkg-config --cflags squashfuse`
 export OUT_DIR = debian/out
 
 lib%.so: debian/lib%.mk
