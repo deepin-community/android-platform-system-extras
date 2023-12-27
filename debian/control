@@ -13,6 +13,7 @@ Build-Depends: debhelper-compat (= 12),
                android-platform-system-core-headers (>= 1:10.0.0+r36-1~),
                dh-exec,
                libsquashfuse-dev,
+               pkg-config,
 Standards-Version: 4.2.1
 Rules-Requires-Root: no
 Homepage: https://android.googlesource.com/platform/system/extras
