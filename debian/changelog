@@ -1,3 +1,9 @@
+android-platform-system-extras (10.0.0+r36+ds-3deepin1) unstable; urgency=medium
+
+  * update debian 10.0.0+r36+ds-2.1
+
+ -- LiChengGang <lichenggang@uniontech.com>  Wed, 27 Dec 2023 21:13:28 +0800
+
 android-platform-system-extras (10.0.0+r36+ds-2.1) unstable; urgency=medium
 
   * Non-maintainer upload.
